@@ -2,22 +2,47 @@ package net.protoprint;
 
 // wave("hello") => []string{"Hello", "hEllo", "heLlo", "helLo", "hellO"}
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MexicanWave {
 
     public static String[] wave(String str) {
 
-        String[] wave = new String[str.length()]; // обявили массив стрингов длиной в количество букв входного слова
+        int count = 0; //счетчик для ArrayList
+        char[] chars = str.toLowerCase().toCharArray(); // переделали стринг в массив символов
 
-        for (int i = 0; i < str.length(); i++) {
-            wave[i] = str;
-            String temp = wave[i].substring(i, i + 1).toUpperCase();   // выделяем букву и делаем ее заглавной
-            String tempstart = wave[i].substring(0, i);             // вычленяем начало слова до заглавной буквы
-            String tempend = wave[i].substring(i + 1, str.length());  // вычленяем остаток слова после заглавной буквы
-            wave[i] = tempstart + temp + tempend;                       // а теперь контактинируем все вместе и кладем в массив
-            System.out.println(wave[i]);
+        List<String> awave = new ArrayList<String>(); // обявили массив стрингов
+
+        for (int i = 0; i < chars.length; i++) {
+            if (chars[i] != ' ') {
+                awave.add(count, str.substring(0, i).toLowerCase() + str.substring(i, i + 1).toUpperCase() + str.substring(i + 1, str.length()).toLowerCase());
+                count++;
+            }
         }
-        //System.out.println(wave.toString());
-        //System.out.println(wave.toString());
-        return new String[]{};
+
+        //String[] wave = awave.toArray(new String[0]);
+
+
+        return awave.toArray(new String[0]);
     }
 }
+/*
+solution from codewars:
+
+import java.util.*;
+
+public class MexicanWave {
+
+    public static String[] wave(String str) {
+      List<String> list = new ArrayList<>();
+      for (int i = 0; i < str.length(); i++) {
+        char ch = str.charAt(i);
+        if (ch == ' ') continue;
+        list.add(str.substring(0,i) + Character.toUpperCase(ch) + str.substring(i+1));
+      }
+      return list.toArray(new String[0]);
+    }
+
+}
+*/
