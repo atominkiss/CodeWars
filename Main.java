@@ -1,6 +1,8 @@
 package net.protoprint;
 
 
+import net.protoprint.RegularExpressions.StringSubpatternRecognitionOne;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -11,8 +13,8 @@ public class Main {
         //System.out.println(MexicanWave.wave("Two words"));
 
         //System.out.println(CreatePhoneNumber.createPhoneNumber(new int[]{9, 8, 7, 6, 5, 4, 3, 2, 1, 0}));
-        //System.out.println(StringSubpatternRecognitionOne.hasSubpattern("abababab"));
-        System.out.println(GiveMeADiamond.print(13));
+        System.out.println(StringSubpatternRecognitionOne.hasSubpattern("abbaabbaabba"));
+        //System.out.println(GiveMeADiamond.print(-2));
 
     }
 }
