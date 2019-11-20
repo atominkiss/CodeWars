@@ -1,7 +1,7 @@
 package net.protoprint;
 
 
-import net.protoprint.RegularExpressions.StringSubpatternRecognitionOne;
+import net.protoprint.RegularExpressions.ConvertStringToCamelCase;
 
 public class Main {
 
@@ -13,8 +13,9 @@ public class Main {
         //System.out.println(MexicanWave.wave("Two words"));
 
         //System.out.println(CreatePhoneNumber.createPhoneNumber(new int[]{9, 8, 7, 6, 5, 4, 3, 2, 1, 0}));
-        System.out.println(StringSubpatternRecognitionOne.hasSubpattern("abbaabbaabba"));
+        //System.out.println(StringSubpatternRecognitionOne.hasSubpattern("abbaabbaabba"));
         //System.out.println(GiveMeADiamond.print(-2));
+        System.out.println(ConvertStringToCamelCase.toCamelCase("the_Stealth_Warrior"));
 
     }
 }
