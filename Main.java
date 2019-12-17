@@ -14,7 +14,7 @@ public class Main {
         //System.out.println(StringSubpatternRecognitionOne.hasSubpattern("abbaabbaabba"));
         //System.out.println(GiveMeADiamond.print(-2));
         //System.out.println(ConvertStringToCamelCase.toCamelCase("the_Stealth_Warrior"));
-        System.out.println(FindTheParityOutlier.find(new int[]{2, 4, 0, 100, 4, 11, 2602, 36}));
+        System.out.println(FindTheParityOutlier.find(new int[]{206847684, 1056521, 7, 17, 1901, 21104421, 7, 1, 35521, 1, 7781}));
 
     }
 }
